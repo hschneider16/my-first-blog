@@ -7,9 +7,11 @@
             <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
                {% include './icons/pencil-fill.svg' %}
             </a>
+            <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}">
+               {% include './icons/trash-fill.svg' %}
+            </a>
        {% endif %}
         </aside>
-        <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
